@@ -1,6 +1,7 @@
 <?php
 include('../bd/conexion.php');
 include('../scripts/head.php');
+include('../usuarios/variable_sesion.php');
 
 $query = "SELECT * FROM producto WHERE id_producto = " . $_GET['id'];
 $resultado = $conexion->query($query);

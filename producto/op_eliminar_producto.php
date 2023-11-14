@@ -1,6 +1,7 @@
 <?php
 // conexion a la base de datos
 include('../bd/conexion.php');
+include('../usuarios/variable_sesion.php');
 
 // Verificar la conexión
 if ($conexion->connect_error) {

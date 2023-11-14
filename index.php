@@ -1,7 +1,17 @@
 <?php 
-include("usuarios/variable_sesion.php");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+session_start();
 require 'bd/conexion.php';
-include ('scripts/head.php');   
+if (!isset($_SESSION['usuario'])) {
+    echo '
+        <script>
+            window.location = "/factura/usuarios/formulario_login.php";
+        </script>
+    ';
+    session_destroy();
+    die();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +36,7 @@ include ('scripts/head.php');
                 <a class="nav-link" href="factura/factura.php">FACTURA</a>
             </li>
         </ul>
-    </div>
-
-    <!-- Agrega los scripts de Bootstrap (jQuery y Popper.js) -->
+    </div>   
     
 </body>
 </html>
