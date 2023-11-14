@@ -1,7 +1,7 @@
 <?php
 //Conexion a la BD
 include('../bd/conexion.php');
-
+include ('../usuarios/variable_sesion.php');
 include('../scripts/head.php');
 
 //Consulta SQL para obtener todos los clientes

@@ -1,5 +1,6 @@
 <?php
-    // conexion a la base de datos
+//Verificacion de Sesion
+include ('../usuarios/variable_sesion.php');
 //Scripts
 include('../scripts/head.php');
 ?>

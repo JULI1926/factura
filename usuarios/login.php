@@ -1,5 +1,4 @@
 <?php
-
 require '../bd/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,16 +11,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (mysqli_num_rows($result) > 0) {
         $_SESSION['usuario'] = $email;
         $row = mysqli_fetch_assoc($result);
-        echo $row['contrasena'];
+
         if (password_verify($contrasena, $row['contrasena'])) {
             header('location: ../index.php');
             exit();
         } else {
-            echo '<script>alert("Contraseña incorrecta y Usuario no encontrado");</script>';
+            echo '<script>alert("Contraseña incorrecta"); window.location = "../usuarios/formulario_registro.php";</script>';
         }
     } else {
-        echo '<script>alert("Usuario no encontrado");</script>';
+        echo '<script>alert("Usuario no encontrado"); window.location = "../usuarios/formulario_registro.php";</script>';
     }
 }
+
 $conexion->close();
 ?>

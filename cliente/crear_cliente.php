@@ -1,6 +1,6 @@
-<?php
+<?php    
     //Conexión a la base de datos
-    include ('../bd/conexion.php');
+    #include ('../bd/conexion.php');
     include ('../usuarios/variable_sesion.php');
     include('../scripts/head.php');
 ?>

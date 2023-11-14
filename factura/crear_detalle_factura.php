@@ -1,5 +1,6 @@
 <?php
 // Conexion a la base de datos
+include ('../usuarios/variable_sesion.php');
 include('../bd/conexion.php');
 include('../scripts/head.php');
 $id = $_GET['id'];

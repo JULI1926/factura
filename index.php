@@ -1,15 +1,5 @@
 <?php 
-session_start();
-if (!isset($_SESSION['usuario'])) {
-	echo '
-			<script>
-				window.location = "usuarios/formulario_login.php";
-			</script>	
-		';
-	//header("location: formulario_login.php");
-	session_destroy();
-	die();
-} 
+include("usuarios/variable_sesion.php");
 require 'bd/conexion.php';
 include ('scripts/head.php');   
 ?>
