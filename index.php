@@ -35,6 +35,11 @@ if (!isset($_SESSION['usuario'])) {
             <li class="nav-item">
                 <a class="nav-link" href="factura/factura.php">FACTURA</a>
             </li>
+            <li class="nav-item">
+                <form action="usuarios/cerrar_sesion.php" method="post">
+                    <button type="submit" class="btn btn-danger">Cerrar Sesión</button>
+                </form>
+            </li>
         </ul>
     </div>   
     
